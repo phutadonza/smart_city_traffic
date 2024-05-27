@@ -1,4 +1,10 @@
 import unittest
+import sys
+import os
+
+# เพิ่มเส้นทางของโฟลเดอร์โปรเจคไปยัง sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from find_busiest_intersections import find_busiest_intersections
 
 class TestFindBusiestIntersections(unittest.TestCase):
