@@ -1,0 +1,27 @@
+import unittest
+from find_busiest_intersections import find_busiest_intersections
+
+class TestFindBusiestIntersections(unittest.TestCase):
+    
+    def test_single_busiest_intersection(self):
+        data = {'A': 10, 'B': 20, 'C': 15}
+        result = find_busiest_intersections(data)
+        self.assertEqual(result, ['B'])
+    
+    def test_multiple_busiest_intersections(self):
+        data = {'A': 10, 'B': 20, 'C': 20}
+        result = find_busiest_intersections(data)
+        self.assertEqual(result, ['B', 'C'])
+    
+    def test_no_intersections(self):
+        data = {}
+        result = find_busiest_intersections(data)
+        self.assertEqual(result, [])
+    
+    def test_all_intersections_same_traffic(self):
+        data = {'A': 10, 'B': 10, 'C': 10}
+        result = find_busiest_intersections(data)
+        self.assertEqual(result, ['A', 'B', 'C'])
+
+if __name__ == '__main__':
+    unittest.main()
