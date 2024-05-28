@@ -13,6 +13,7 @@ class TestFindBusiestIntersections(unittest.TestCase):
         data = {'A': 10, 'B': 20, 'C': 15}
         result = find_busiest_intersections(data)
         print("Result for test_single_busiest_intersection:", result)
+        # self.assertEqual(result)
     
     def test_multiple_busiest_intersections(self):
         data = {'A': 10, 'B': 20, 'C': 20}
